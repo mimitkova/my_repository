@@ -33,7 +33,7 @@ public abstract class TestBase {
 			FileInputStream ip = null;
 			
 			try {
-				ip = new FileInputStream(System.getProperty("user.dir")+"//src3//test//java//resources//config.properties");
+				ip = new FileInputStream(System.getProperty("user.dir")+"//java//resources//config.properties");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}

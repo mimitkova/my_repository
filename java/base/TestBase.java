@@ -33,7 +33,7 @@ public abstract class TestBase {
 			FileInputStream ip = null;
 			
 			try {
-				ip = new FileInputStream(System.getProperty("user.dir")+"//java//resources//config.properties");
+				ip = new FileInputStream(System.getProperty("user.dir")+"//java//resources//config.properties"); 
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -51,13 +51,13 @@ public abstract class TestBase {
 	//Initialize driver as per the config.properties file's browser type
 	private static void initDriver() {
 		if (driver == null) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Mile\\chromedriver_win32/chromedriver.exe");
 			if (config.getProperty("browser").equals("Mozilla")) {
 				driver = new FirefoxDriver();
 			} else if (config.getProperty("browser").equals("IE")) {
 				driver = new InternetExplorerDriver();
-			} else if (config.getProperty("browser").equals("Chrome")) {
+			} else if (config.getProperty("browser").equals("Chrome")){
+				System.setProperty("webdriver.chrome.driver",
+						"C:\\Users\\Mile\\chromedriver_win32/chromedriver.exe");
 				driver = new ChromeDriver();
 			}
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);

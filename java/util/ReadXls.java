@@ -19,7 +19,7 @@ public class ReadXls {
 	public ReadXls() {
 	
 		try {
-			fis = new FileInputStream("user.dir")+"//java//resources//Test.xlsx");
+			fis = new FileInputStream(System.getProperty("user.dir")+"//java//resources//Test.xlsx");
 			workbook = new XSSFWorkbook(fis);
 		    sheet = workbook.getSheetAt(0);
 			fis.close();

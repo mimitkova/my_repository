@@ -54,7 +54,7 @@ public class SignUpErrorPage extends PageBase {
 	public void setUserDetails() {		
 		getData();	
 		int field_number=0;
-        int x = 0;
+        int x = 0; 
 		
 		while (excel_data[x]!=null) {
 			field_number++;

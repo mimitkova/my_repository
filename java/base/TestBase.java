@@ -67,7 +67,7 @@ public abstract class TestBase {
 			System.out.println("initDriverfinished");
 		}
 	}
-	
+	 
 	//quit driver
 	public static void quitDriver() {
 		driver.quit();

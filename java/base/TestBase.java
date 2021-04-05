@@ -52,8 +52,10 @@ public abstract class TestBase {
 	private static void initDriver() {
 		if (driver == null) {
 			if (config.getProperty("browser").equals("Mozilla")) {
-				driver = new FirefoxDriver();
+				//set Property with driver's path for Mozilla will be added here
+				driver = new FirefoxDriver();				
 			} else if (config.getProperty("browser").equals("IE")) {
+				//set Property with driver's path for IE will be added here
 				driver = new InternetExplorerDriver();
 			} else if (config.getProperty("browser").equals("Chrome")){
 				System.setProperty("webdriver.chrome.driver",

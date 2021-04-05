@@ -82,11 +82,11 @@ public class SignUpErrorPage extends PageBase {
 		
 	//set the error message from page
 	public String setErrorMessage() {
-			this.terms.click();
-			this.join_now.click();
-			// This will capture the error message
-			error_msg = error.getText();		
-			return error_msg;
+		this.terms.click();
+		this.join_now.click();
+		// This will capture the error message
+		error_msg = error.getText();		
+		return error_msg;
 	}
 	
 	//get the error message
